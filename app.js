@@ -57,7 +57,7 @@ const start = async () => {
 
   const filesNames = fs.readdirSync(pathToSettingsFolder);
 
-  await Promise.all(resultGetActiveInstruments.result.map(async instrumentDoc => {
+  await Promise.all(resultGetActiveInstruments.result.result.map(async instrumentDoc => {
     const halfFromAverageVolume = Math.ceil(instrumentDoc.average_volume_for_last_24_hours / 2);
 
     let instrumentName = instrumentDoc.name;
